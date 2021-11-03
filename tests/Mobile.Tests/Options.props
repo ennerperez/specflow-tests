@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <PropertyGroup Label="Features">
+    <Framework>NUnit</Framework>
+    <Engine>XamarinUITest</Engine> <!-- Appium / XamarinUITest -->
+  </PropertyGroup>
+
+  <PropertyGroup Label="Options">
+    <EnableAndroidDriver>false</EnableAndroidDriver>
+    <EnableiOSDriver>false</EnableiOSDriver>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <BuildConstants Condition="'$(Framework)' == 'NUnit'">$(BuildConstants)NUNIT;</BuildConstants>
+    <BuildConstants Condition="'$(Engine)' == 'Appium'">$(BuildConstants)APPIUM;</BuildConstants>
+    <BuildConstants Condition="'$(Engine)' == 'XamarinUITest'">$(BuildConstants)XAMARIN_UITEST;</BuildConstants>
+    <BuildConstants Condition="'$(EnableAndroidDriver)' == 'true'">$(BuildConstants)ANDROID;</BuildConstants>
+    <BuildConstants Condition="'$(EnableiOSDriver)' == 'true'">$(BuildConstants)IOS;</BuildConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants Condition="'$(BuildConstants)' != ''">$(BuildConstants)$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
+
+</Project>

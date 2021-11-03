@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="Options.props"/>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.35"/>
+    <PackageReference Include="FluentAssertions" Version="5.10.3"/>
+  </ItemGroup>
+
+  <ItemGroup Label="NUnitReferences" Condition="'$(Framework)' == 'NUnit'">
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.22" />
+    <PackageReference Include="nunit" Version="3.13.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+  </ItemGroup>
+
+  <ItemGroup Label="AppiumReferences" Condition="'$(Engine)' == 'Appium'">
+    <PackageReference Include="Appium.WebDriver" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </Content>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <Import Project="..\SpecFlow.Shared\SpecFlow.Shared.projitems" Label="SpecFlow.Shared"/>
+
+</Project>

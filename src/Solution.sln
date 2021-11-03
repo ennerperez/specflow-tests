@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Tests", "..\Tests\Web.Tests\Web.Tests.csproj", "{8FA230D1-919B-43AD-99FC-D56DABCBF600}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SpecFlow.Shared", "..\Tests\SpecFlow.Shared\SpecFlow.Shared.shproj", "{92C0BC82-65A3-47F0-858F-CD7384D441D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C04B64BF-9837-484D-9B0A-A5C276EC65E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EBFBE9EC-8BBE-4080-86F3-201E68268029}"
+ProjectSection(SolutionItems) = preProject
+	..\.editorconfig = ..\.editorconfig
+	..\.gitattributes = ..\.gitattributes
+	..\.gitignore = ..\.gitignore
+	..\CHANGELOG.md = ..\CHANGELOG.md
+	..\LICENSE = ..\LICENSE
+	..\README.md = ..\README.md
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile.Tests", "..\tests\Mobile.Tests\Mobile.Tests.csproj", "{BCA38607-ECDB-407C-8F0A-760CADF2D015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FA230D1-919B-43AD-99FC-D56DABCBF600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA230D1-919B-43AD-99FC-D56DABCBF600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA230D1-919B-43AD-99FC-D56DABCBF600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA230D1-919B-43AD-99FC-D56DABCBF600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA38607-ECDB-407C-8F0A-760CADF2D015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA38607-ECDB-407C-8F0A-760CADF2D015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA38607-ECDB-407C-8F0A-760CADF2D015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA38607-ECDB-407C-8F0A-760CADF2D015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92C0BC82-65A3-47F0-858F-CD7384D441D3} = {C04B64BF-9837-484D-9B0A-A5C276EC65E8}
+		{8FA230D1-919B-43AD-99FC-D56DABCBF600} = {C04B64BF-9837-484D-9B0A-A5C276EC65E8}
+		{BCA38607-ECDB-407C-8F0A-760CADF2D015} = {C04B64BF-9837-484D-9B0A-A5C276EC65E8}
+	EndGlobalSection
+EndGlobal
